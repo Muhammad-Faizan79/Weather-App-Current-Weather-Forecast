@@ -3,6 +3,7 @@ import SearchBar from "./components/SearchBar";
 import WeatherDetailCard from "./components/weatherDtetails";
 import ForecastCard from "./components/Forecast";
 
+
 import "./App.css";
 import WeatherCard from "./components/WeatherCard";
 import { useEffect, useState } from "react";
@@ -18,7 +19,7 @@ function App() {
     getdata()
     },[city])
 
-const API_KEY = "07e71898aabbe28a2c7a4d22e655caeb";
+const API_KEY = import.meta.env.VITE_API_KEY;
 const FORECAST_API =
     "https://api.openweathermap.org/data/2.5/forecast";
     // `${FORECAST_API}?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`
